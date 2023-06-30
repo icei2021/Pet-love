@@ -60,7 +60,17 @@ body{
 .logo-image{
     width: 75px;
     margin-right: 10px;
+    animation-name: rotar;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    /* animation-delay: 5s; */
+    animation-iteration-count: 1;
+    /* animation-direction: alternate; */
+    animation-fill-mode: both;
 }
+/* .logo-image:hover{
+    transform: rotate(180deg);
+} */
 
 .nav-container{
     display: flex;
@@ -117,8 +127,14 @@ body{
     transition-timing-function: ease; */
     transition: background-color 1s ease-in-out;
 }
-.header-button:hover{
+/* .header-button:hover{
     background-color: orange;
+} */
+
+.header-button:hover{
+    animation-name: miBoton;
+    animation-duration: 3s;
+    animation-timing-function: ease;
 }
 
 /*Networks*/
@@ -189,7 +205,7 @@ body{
     height: 850px;
     display: grid;
     grid-template-columns:repeat(3, 1fr) ;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 15px;
     margin-bottom: 35px;
 }
@@ -199,9 +215,143 @@ body{
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: filter .7s ease-in;
 }
 
 .grid-image:last-child{
     grid-column-start:2;
     grid-column-end: 4;
+}
+
+.grid-image:hover{
+    cursor: pointer;
+}
+
+.grid-image:nth-child(1){
+    filter: blur(3px);   
+}
+
+.grid-image:nth-child(1):hover{
+    filter: blur(0);
+}
+.grid-image:nth-child(2):hover{
+    filter: brightness(50%);   
+}
+.grid-image:nth-child(3):hover{
+    filter: grayscale(100%);   
+}
+.grid-image:nth-child(4):hover{
+    filter: contrast(50%);   
+}
+.grid-image:nth-child(5):hover{
+    filter: invert(100%);   
+}
+
+.grid-image:nth-child(6):hover{
+    filter: hue-rotate(180deg);   
+}
+.grid-image:nth-child(7):hover{
+    filter: saturate(0%);   
+}
+.grid-image:nth-child(8):hover{
+    filter: sepia(100%);   
+}
+
+/*Parallax*/
+.parallax{
+    background-color: var(--primary-color);
+    background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,1)), url(https://images.unsplash.com/photo-1545529468-42764ef8c85f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    background-attachment: fixed;
+}
+
+.parallax-title{
+    text-align: center;
+    font-family: var(--primary-font);
+    color: var(--light-color);
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+.parallax-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius:10px ;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    cursor: pointer;
+    transition:transform 1s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-title{
+    text-align: center;
+    font-family: var(--primary-font);
+    color: var(--light-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.card-text{
+    text-align: justify;
+    font-family: var(--secondary-font);
+    color: var(--light-color);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.card .fa-solid{
+    color: var(--primary-color);
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes miBoton {
+    0%{
+        background-color:lime;
+    }
+    25%{
+        background-color:crimson;
+    }
+    50%{
+        background-color:steelblue;
+    }
+    75%{
+        background-color:cyan;
+    }
+    100%{
+            background-color:blue;
+    }
 }

@@ -18,6 +18,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -68,7 +73,7 @@
         </div>
       </nav>
       <div class="header-content">
-        <h1 class="header-title">
+        <h1 class="header-title animate__animated animate__flip">
           trust us we <br />
           love to pets
         </h1>
@@ -113,13 +118,99 @@
       <h2 class="title">My Gallery</h2>
       <div class="container">
         <div class="gallery-grid">
-          <img class="grid-image" src="img/grid1.jpg" alt="Pet" />
-          <img class="grid-image" src="img/grid2.jpg" alt="Pet" />
-          <img class="grid-image" src="img/grid3.jpg" alt="Pet" />
-          <img class="grid-image" src="img/grid4.jpg" alt="Pet" />
-          <img class="grid-image" src="img/grid5.jpg" alt="Pet" />
+          <img
+            class="grid-image"
+            data-aos="fade-right"
+            src="img/grid1.jpg"
+            alt="Pet"
+          />
+          <img
+            class="grid-image"
+            data-aos="flip-up"
+            src="img/grid2.jpg"
+            alt="Pet"
+          />
+          <img
+            class="grid-image"
+            data-aos="fade-left"
+            src="img/grid3.jpg"
+            alt="Pet"
+          />
+          <img
+            class="grid-image"
+            data-aos="fade-right"
+            src="img/grid4.jpg"
+            alt="Pet"
+          />
+          <img
+            class="grid-image"
+            data-aos="flip-up"
+            src="img/grid5.jpg"
+            alt="Pet"
+          />
+          <img
+            class="grid-image"
+            data-aos="fade-left"
+            src="img/grid6.jpg"
+            alt="Pet"
+          />
+          <img
+            class="grid-image"
+            data-aos="fade-right"
+            src="img/grid7.jpg"
+            alt="Pet"
+          />
+          <img
+            class="grid-image"
+            data-aos="flip-up"
+            src="img/grid8.jpg"
+            alt="Pet"
+          />
         </div>
       </div>
+      <!--container-->
+      <div class="parallax">
+        <h2 class="parallax-title">Servicios</h2>
+        <div class="container parallax-content">
+          <div class="card">
+            <i class="fa-solid fa-medal"></i>
+            <div class="card-content">
+              <h3 class="card-title">Lorem, ipsum dolor.</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam ullam sed asperiores qui corrupti eius?
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-dog"></i>
+            <div class="card-content">
+              <h3 class="card-title">Lorem, ipsum dolor.</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Impedit, maiores asperiores explicabo quia facilis iste.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-cat"></i>
+            <div class="card-content">
+              <h3 class="card-title">Lorem, ipsum dolor.</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Impedit, maiores asperiores explicabo quia facilis iste.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--parallax-->
     </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
